@@ -1,10 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Test Single Page Application</title>
-        <link rel="stylesheet" href="SinglePage/styles.css">
+        <link href="{% static 'SinglePage/styles.css' %}" type="text/css" rel="stylesheet">
+        <script src="{% static 'SinglePage/page.js' %}"></script>
     </head>
+    {% block body %}
     <body>
-        <script src="SinglePage/page.js"></script>
+
+        <div id="greet">
+        <h1>Hello and Welcome!</h1>
+    </div>
+
+    <div id="click">
+        <button id="button1">Click to Start</button>
+    </div>
+
     </body>
+    {% endblock %}
 </html>
